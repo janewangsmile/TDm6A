@@ -154,7 +154,28 @@ Two output files have been stored to the specified file path, for example:
 
 ![GitHub Logo](example/XIST_predicted_m6A.png)
 
-**Output file 2**, stored as "Desktop/XIST_predicted_result.csv":
+
+**Output file 2**, stored as "Desktop/XIST_predicted_result.csv" (only the first 10 rows are shown here):
+
+A_site | Pred_Neg_Prob | Pred_Posi_Prob | predict_class
+------ | ------------- | -------------- | -------------
+75|0.928563195466995|0.0713551462|N
+111|0.9029467225|0.0971666962|N
+219|0.9846518576|0.0153094709|N
+314|0.990193969|0.00978688|N
+548|0.881451565|0.1186588973|N
+881|0.2695866555|0.7304918885|P
+941|0.3081773013|0.6917426944|P
+953|0.5651386619|0.4351187766|N
+988|0.6616799831|0.3384975821|N
+
+**A_site**: the position of candidate adenosine in the given nucleotide sequence;
+
+**Pred_Neg_Prob**: the predicted probability of this adenosine to be non-m6A site;
+
+**Pred_Posi_Prob**: the predicted probability of this adenosine to be m6A site;
+
+**predict_class**: this adenosine site is predicted to be a "P" (positive) or "N" (negative) m6A site.
 
 
 
