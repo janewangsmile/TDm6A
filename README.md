@@ -151,7 +151,7 @@ To indicate the progress of the prediction, you will see the following running l
 Two output files have been stored to the specified file path, for example:
 
 **Output file 1**, stored as "Desktop/XIST_predicted_m6A.png":
-
+![GitHub Logo](/example/)
 
 **Output file 2**, stored as "Desktop/XIST_predicted_result.csv":
 
