@@ -120,17 +120,28 @@ For the easy and convinient application of TDm6A models, the function **TDm6A_ap
 
 **Usage:** here, we use XIST transcript as an example:
 
-```
-# check all above mentioned libaries have been loaded, then start prediction by using the following lines:
+**Step 1**, loading required packages: 
 
+``` 
+library(TDm6A)
+library(keras) 
+library(ROCR) 
+library(seqinr)
+``` 
+**Step 2**, setting the file path for input and output files, selecting specific models to use: 
+
+```  
 faFile_Input = "Desktop/XIST.fa"                      # full file path for the input fasta file
 plot_Output = "Desktop/XIST_predicted_m6A.png"        # full file path for the output plot   
 csvFile_Output = "Desktop/XIST_predicted_result.csv"  # full file path for the output result
 
 cellType = "A549"         # which model to use, provided options are: "A549"/"CD8T"/"HEK293"/"panCell_mRNA"/"panCell_preRNA".
                           # If no preferred cell type, users can use the pan-cell model with transcript in mRNA or preRNA mode.
+``` 
+**Step 3**, applying models for prediction: 
 
-TDm6A_application(faFile_Input, plot_Output,csvFile_Output, cellType)   # predicting...
+```
+TDm6A_application(faFile_Input, plot_Output,csvFile_Output, cellType)
 ```
 
 To indicate the progress of the prediction, you will see the following running logs:
