@@ -116,7 +116,7 @@ TDm6A_getMotifs(x_train_HEK293, y_train_HEK293, x_test_HEK293, y_test_HEK293,"HE
 ``` 
 
 # Apply TDm6A to predict m6A sites on a given transcript 
-For the easy and convinient application of TDm6A models, the function **TDm6A_application(faFile_Input,plot_Output,csvFile_Output, cellType)** is available for users to predict m6A sites on a given transcript. Users only need to prepare the individual fasta files for each transcript of interest. As a result, the fucntion will output a .png file and .csv file to the specified file paths.
+For the easy and convinient application of TDm6A models, the function **TDm6A_application( faFile_Input, plot_Output, csvFile_Output, cellType )** is available for users to predict m6A sites on a given transcript. Users only need to prepare the individual fasta files for each transcript of interest. As a result, the fucntion will output a .png file and .csv file to the specified file paths.
 
 **Usage:** here, we use XIST transcript as an example:
 
@@ -131,9 +131,9 @@ library(seqinr)
 **Step 2**, setting the file path for input and output files, selecting specific models to use: 
 
 ```  
-faFile_Input = "Desktop/XIST.fa"                      # full file path for the input fasta file
-plot_Output = "Desktop/XIST_predicted_m6A.png"        # full file path for the output plot   
-csvFile_Output = "Desktop/XIST_predicted_result.csv"  # full file path for the output result
+faFile_Input = "Desktop/XIST.fa"                      # file path for the input fasta file, change to your own settings
+plot_Output = "Desktop/XIST_predicted_m6A.png"        # file path for the output plot, change to your own settings   
+csvFile_Output = "Desktop/XIST_predicted_result.csv"  # file path for the output result, change to your own settings
 
 cellType = "A549"         # which model to use, provided options are: "A549"/"CD8T"/"HEK293"/"panCell_mRNA"/"panCell_preRNA".
                           # If no preferred cell type, users can use the pan-cell model with transcript in mRNA or preRNA mode.
@@ -141,7 +141,7 @@ cellType = "A549"         # which model to use, provided options are: "A549"/"CD
 **Step 3**, applying models for prediction: 
 
 ```
-TDm6A_application(faFile_Input, plot_Output,csvFile_Output, cellType)
+TDm6A_application(faFile_Input, plot_Output, csvFile_Output, cellType)
 ```
 
 To indicate the progress of the prediction, you will see the following running logs:
